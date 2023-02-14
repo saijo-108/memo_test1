@@ -1,3 +1,10 @@
+<?php 
+$form['name'] = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+if ($form['name'] === '') {
+    $error['name'] = 'blank';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
